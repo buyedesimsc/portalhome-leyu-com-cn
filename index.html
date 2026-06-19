@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>索引视野 · 乐鱼体育</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f9fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2.4rem 1.6rem 3.2rem;
+    }
+
+    /* hero — 杂志横幅感 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 1.2rem;
+    }
+
+    .hero__label {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .hero__title {
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #0c1b33;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero__sub {
+      font-size: 1rem;
+      color: #475569;
+      font-weight: 350;
+      max-width: 34em;
+    }
+
+    /* 正文区 */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+
+    .section__heading {
+      font-size: 1.35rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      border-left: 4px solid #b0c4de;
+      padding-left: 0.9rem;
+      margin-bottom: 1.1rem;
+      color: #1e293b;
+    }
+
+    .section__text {
+      font-size: 1rem;
+      color: #334155;
+      margin-bottom: 1.2rem;
+    }
+
+    .section__text strong {
+      color: #1e293b;
+      font-weight: 550;
+    }
+
+    .inset-box {
+      background-color: #ffffff;
+      border-radius: 14px;
+      padding: 1.6rem 1.8rem;
+      margin: 1.6rem 0 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.03);
+      border: 1px solid #e9edf3;
+    }
+
+    .inset-box p {
+      margin-bottom: 0.8rem;
+      font-size: 0.975rem;
+    }
+
+    .inset-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .inset-box .tag {
+      display: inline-block;
+      background: #ecf1f7;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #2c3e50;
+      margin-right: 0.4rem;
+      margin-top: 0.2rem;
+    }
+
+    .footnote {
+      margin-top: 3.2rem;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 1.8rem;
+      font-size: 0.9rem;
+      color: #64748b;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.6rem;
+    }
+
+    .footnote a {
+      color: #1e293b;
+      text-decoration: none;
+      border-bottom: 1px dotted #b6c8da;
+      transition: border-color 0.2s;
+    }
+
+    .footnote a:hover {
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .inline-link {
+      color: #1a3b5d;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid #cbd5e1;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #1e293b;
+      color: #0f1d33;
+    }
+
+    /* 点缀 */
+    .quiet-meta {
+      font-size: 0.85rem;
+      color: #94a3b8;
+      margin-top: 0.4rem;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 540px) {
+      .page {
+        padding: 1.8rem 1.2rem 2.8rem;
+      }
+      .hero__title {
+        font-size: 1.9rem;
+      }
+      .hero__sub {
+        font-size: 0.95rem;
+      }
+      .inset-box {
+        padding: 1.2rem 1.2rem;
+      }
+      .section__heading {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 首页横幅 -->
+    <header class="hero">
+      <div class="hero__label">索引 · 专题</div>
+      <h1 class="hero__title">信息整理手记</h1>
+      <p class="hero__sub">从零散的赛事消息到结构化的体育资料库，这里记录了一次关于内容聚合的尝试。</p>
+    </header>
+
+    <!-- 背景说明：为什么想到做资料索引 -->
+    <section class="section">
+      <h2 class="section__heading">一种整理的冲动</h2>
+      <p class="section__text">
+        过去几年，身边不少朋友每周都在不同平台之间跳转，只为拼凑一支球队的完整赛程、球员近况或历史数据。信息并非不存在，而是分散在社交媒体的碎片、直播间的弹幕、以及零散的新闻段落里。<strong>缺少一个安静的、可回溯的整理节点</strong>——这个念头慢慢变成了一个小行动：把跟体育资料相关的内容线索，收拢到一处固定的地方。
+      </p>
+      <p class="section__text">
+        于是有了这个页面的起点。它不追求即时更新，而更像一本纸质剪报，把值得留存的栏目、常用检索路径、以及几类常被问起的资料类型做一次归置。过程中意外发现，当信息被重新编排后，原本模糊的脉络会变得清晰很多。
+      </p>
+    </section>
+
+    <!-- 三段自然介绍：资料类型+使用场景+一点观察 -->
+    <section class="section">
+      <h2 class="section__heading">三段索引切片</h2>
+
+      <p class="section__text">
+        <strong>· 赛历与归档</strong><br>
+        从联赛周期到杯赛阶段，按月份整理出一份简易赛历卡片。同时把过去两个赛季主要球队的阵容变动、转会记录做成索引表——不保证百分百完整，但足够作为查证起点。每次翻阅时，能感受到时间在赛事中留下的刻度。
+      </p>
+
+      <p class="section__text">
+        <strong>· 术语与规则边角</strong><br>
+        体育世界里充满了缩写、统计代号和裁判判罚细则。我收集了一份常见术语的简短释义，附带规则变动的时间节点。例如某条越位规则在哪个赛季调整过、某类统计口径如何定义。这些细碎知识点，常常在和朋友讨论时派上用场。
+      </p>
+
+      <p class="section__text">
+        <strong>· 内容路径笔记</strong><br>
+        如果想把某个运动项目了解得更系统，可以往哪个方向检索？哪些栏目或数据站的信息密度更高？我记录了几条自己验证过的查找路径，像一本小小的寻路指南。每一条都标注了来源类型和参考价值，避免信息过载。
+      </p>
+    </section>
+
+    <!-- 一个卡片式区块：更轻松的场景描述 -->
+    <div class="inset-box">
+      <p><span class="tag">日常场景</span><span class="tag">资料参考</span></p>
+      <p>
+        周末下午想回顾某场经典对决的阵容，或是写一篇小分析时需要核对球员号码与位置——这些时刻，你大概率希望直接定位到准确的信息页，而不是在搜索结果里反复筛选。<a href="https://portalhome-leyu.com.cn" class="inline-link">乐鱼体育</a>所承载的，正是这样一种对信息秩序的偏好：把常用板块、数据入口、内容专题用统一的架子陈列出来，取用时不费力。
+      </p>
+      <p>
+        页面内的链接都指向长期维护的栏目，适合作为浏览的起点。如果你也习惯先看目录再进入细节，应该会觉得顺手。
+      </p>
+    </div>
+
+    <!-- 额外的观察段落 / 类似FAQ摘要但自然 -->
+    <section class="section">
+      <h2 class="section__heading">两个常见疑问的简短回应</h2>
+      <p class="section__text">
+        <strong>Q：这里的资料会不会太过时？</strong><br>
+        赛历和规则变动部分会跟随赛季做复核，但无法做到实时同步。对于需要极高时效性的信息（如当天首发、实时比分），建议配合即时数据源使用。这个页面更偏重“沉淀后的参考”。
+      </p>
+      <p class="section__text">
+        <strong>Q：为什么只有体育相关内容？</strong><br>
+        因为最初只是围绕个人兴趣和日常查询需求做的整理。慢慢发现，当专注在一个领域把索引做细，比追求大而全更能帮到有同样需求的人。未来也许会拓展其他类别，但目前仍以体育资料为主线。
+      </p>
+      <p class="quiet-meta">* 以上回应基于过去半年收到的几次读者反馈整理而成。</p>
+    </section>
+
+    <!-- 页尾访问提示 —— 自然嵌入链接 -->
+    <footer class="footnote">
+      <span>
+        索引主页 · <a href="https://portalhome-leyu.com.cn">乐鱼体育</a>
+      </span>
+      <span style="opacity:0.7;">— 资料整理始于2024 · 持续修订中</span>
+    </footer>
+
+  </div>
+</body>
+</html>

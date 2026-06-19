@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://buyedesimsc.github.io/portalhome-leyu-com-cn/sitemap.xml
