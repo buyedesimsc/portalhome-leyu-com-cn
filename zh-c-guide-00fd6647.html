@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐竞体育 · 稳定入口说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Georgia", "Noto Serif SC", "Source Han Serif SC", serif;
+            line-height: 1.7;
+            background-color: #f6f5f1;
+            color: #2c2b27;
+        }
+
+        .dark-hero {
+            background: linear-gradient(145deg, #121212 0%, #1e1d1b 100%);
+            color: #e8e5de;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid #3b3a36;
+        }
+
+        .dark-hero h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            margin-bottom: 1rem;
+        }
+
+        .dark-hero .sub {
+            font-size: 1.1rem;
+            color: #bcb6a8;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        .intro-block {
+            background: #ffffff;
+            padding: 2.5rem 2.8rem;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+            margin-bottom: 3rem;
+        }
+
+        .intro-block p {
+            margin-bottom: 1.4rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.8rem;
+            margin: 2.5rem 0 2rem;
+        }
+
+        .feature-card {
+            background: #fcfbf9;
+            border-radius: 16px;
+            padding: 1.8rem 1.4rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eae8e2;
+            transition: transform 0.2s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #3d3a32;
+            letter-spacing: 0.02em;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #5a5750;
+            margin-bottom: 0;
+        }
+
+        .scene-section {
+            background: #f2efe9;
+            padding: 2rem 2.8rem;
+            border-radius: 18px;
+            margin: 2.5rem 0;
+        }
+
+        .scene-section h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+            color: #302d27;
+        }
+
+        .scene-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .scene-section li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            font-size: 1rem;
+            color: #3b3831;
+        }
+
+        .scene-section li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #b55b3c;
+            font-size: 1.2rem;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            padding: 2rem 2.8rem;
+            border-radius: 18px;
+            margin-top: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: #2c2b27;
+            cursor: pointer;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid #e8e4dc;
+        }
+
+        .faq-mini details:last-of-type summary {
+            border-bottom: none;
+        }
+
+        .faq-mini p {
+            margin: 0.6rem 0 1rem 1.2rem;
+            color: #5a5750;
+            font-size: 0.95rem;
+        }
+
+        .closing-note {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 1.8rem 0 0.5rem;
+            border-top: 1px solid #dbd7ce;
+            font-size: 0.95rem;
+            color: #6b675e;
+        }
+
+        a {
+            color: #b55b3c;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.15s;
+        }
+
+        a:hover {
+            color: #8f442b;
+        }
+
+        @media (max-width: 640px) {
+            .dark-hero h1 {
+                font-size: 2.2rem;
+            }
+            .intro-block, .scene-section, .faq-mini {
+                padding: 1.6rem 1.4rem;
+            }
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="dark-hero">
+    <h1>乐竞体育</h1>
+    <div class="sub">一个认真整理过的稳定入口说明页 · 围绕功能与场景展开</div>
+</div>
+
+<div class="main-container">
+
+    <div class="intro-block">
+        <p>
+            如果你正在寻找一个结构清晰、信息可追溯的起点，那么以下内容便是围绕「<a href="https://zh-c-lejing.com">乐竞体育</a>」所梳理的概要说明。这份页面不渲染夸张承诺，只陈述经过核实的界面逻辑与使用场景。
+        </p>
+        <p>
+            从页面布局到功能分区，<a href="https://zh-c-lejing.com">乐竞体育</a>的界面强调相对稳定的观览顺序：顶部导航承载主要分类入口，中部卡片区用于内容预览，底部辅助区域保留说明与联络线索。这种结构在多数设备上都能保持一致的浏览节奏。
+        </p>
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>分区明确</h3>
+            <p>类别与子页面以层级方式陈列，减少反复跳转的负担。每个区块都带有简短的上下文提示。</p>
+        </div>
+        <div class="feature-card">
+            <h3>文字优先</h3>
+            <p>核心信息以文本形式直接呈现，图片与装饰元素作为辅助说明，避免因资源加载滞后而丢失内容。</p>
+        </div>
+        <div class="feature-card">
+            <h3>链接可追溯</h3>
+            <p>外部链接与内部导航均保留明确的视觉区分，鼠标悬停时显示下划线，点击前后状态有细微变化。</p>
+        </div>
+        <div class="feature-card">
+            <h3>响应式适配</h3>
+            <p>在手机、平板与桌面浏览器中，内容流式重排，字体与卡片尺寸跟随视口变化，不丢失可读性。</p>
+        </div>
+    </div>
+
+    <div class="scene-section">
+        <h2>常见访问场景</h2>
+        <ul>
+            <li>通过浏览器书签直接进入首页，查看当日更新的分类摘要。</li>
+            <li>在移动端快速浏览顶部导航，找到特定栏目入口。</li>
+            <li>阅读每页底部的说明区，了解功能定义与内容归属。</li>
+            <li>使用搜索栏（如果可用）定位历史文章或常用工具页面。</li>
+        </ul>
+        <p style="margin-top: 1.2rem; font-size: 0.95rem; color: #5a5750;">
+            上述场景均基于界面本身的可操作路径，不依赖外部推送或弹窗提示。
+        </p>
+    </div>
+
+    <div class="faq-mini">
+        <details open>
+            <summary>页面信息会频繁变动吗？</summary>
+            <p>首页卡片区与导航栏的内容更新节奏相对固定，通常以日或周为单位。底部的说明类文本更新频率更低，除非结构发生调整。</p>
+        </details>
+        <details>
+            <summary>是否需要在特定浏览器下访问？</summary>
+            <p>主流浏览器的最近两个主要版本均可正常渲染页面布局。建议开启 JavaScript 以获得部分交互效果，但核心文本内容不依赖脚本。</p>
+        </details>
+        <details>
+            <summary>链接是否安全可靠？</summary>
+            <p>页面中所有指向 <a href="https://zh-c-lejing.com">乐竞体育</a> 的链接均使用 HTTPS 协议，并经过基本的域名验证。日常使用时可留意地址栏锁形图标。</p>
+        </details>
+    </div>
+
+    <div class="closing-note">
+        <p>以上内容旨在提供稳定、可参考的页面说明，不构成任何操作建议或使用担保。</p>
+        <p style="margin-top: 0.4rem;">—— 如你有其他疑问，可返回首页直接浏览 <a href="https://zh-c-lejing.com">乐竞体育</a> 的结构布局。</p>
+    </div>
+
+</div>
+
+</body>
+</html>
