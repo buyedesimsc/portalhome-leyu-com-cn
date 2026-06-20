@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leyu · 简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #fbe9e0 0%, #f7d9c4 45%, #f1cbb5 85%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-card {
+            max-width: 780px;
+            width: 100%;
+            background: #fffffffa;
+            backdrop-filter: blur(2px);
+            border-radius: 44px;
+            padding: 3rem 2.8rem 3.2rem;
+            box-shadow: 0 20px 40px -12px rgba(170, 110, 70, 0.25),
+                        0 8px 18px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 540px) {
+            body {
+                padding: 1.2rem;
+            }
+            .page-card {
+                padding: 2.2rem 1.6rem 2.5rem;
+                border-radius: 32px;
+            }
+        }
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            color: #3f281d;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .hint-badge {
+            font-size: 0.8rem;
+            font-weight: 370;
+            background: #e6d3c2;
+            color: #4f3627;
+            padding: 0.15rem 0.8rem;
+            border-radius: 60px;
+            letter-spacing: 0.3px;
+            margin-left: 0.5rem;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #6d4e39;
+            border-left: 4px solid #dbb79b;
+            padding-left: 1.2rem;
+            margin: 1rem 0 1.8rem;
+            line-height: 1.5;
+            font-weight: 370;
+        }
+
+        .summary {
+            background: #fbf3ed;
+            padding: 1.6rem 1.8rem;
+            border-radius: 28px;
+            margin-bottom: 2.2rem;
+            line-height: 1.6;
+            color: #3d2b1f;
+        }
+
+        .summary strong {
+            font-weight: 510;
+            color: #4d3322;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem 1.8rem;
+            margin: 2rem 0 2.4rem;
+        }
+
+        .feature-item {
+            flex: 1 1 170px;
+            background: #fef9f5;
+            padding: 1.2rem 1.2rem 1.5rem;
+            border-radius: 24px;
+            box-shadow: 0 2px 6px rgba(150, 100, 60, 0.04);
+            border: 1px solid #f1dfd0;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            font-weight: 440;
+            color: #4a3222;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feature-item p {
+            font-size: 0.94rem;
+            color: #5a3f2e;
+            line-height: 1.5;
+        }
+
+        .tip-box {
+            background: #f2e5d9;
+            border-radius: 30px;
+            padding: 1.5rem 1.8rem;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .tip-box p {
+            color: #3c291d;
+            line-height: 1.65;
+        }
+
+        .tip-box .label {
+            font-weight: 500;
+            color: #2d1d13;
+            display: inline-block;
+            margin-right: 0.4rem;
+        }
+
+        .faq-mini {
+            margin: 1.6rem 0 2rem;
+            border-top: 1px dashed #dcc4b2;
+            padding-top: 1.8rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.9rem;
+            padding: 0.2rem 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 470;
+            color: #3a271c;
+            cursor: pointer;
+            padding: 0.3rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-mini summary::before {
+            content: "▸";
+            margin-right: 0.6rem;
+            color: #ac8469;
+            font-size: 1.1rem;
+        }
+
+        .faq-mini details[open] summary::before {
+            content: "▾";
+        }
+
+        .faq-mini details p {
+            margin: 0.7rem 0 0.2rem 1.5rem;
+            color: #4f3928;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        .access-note {
+            background: white;
+            border-radius: 40px;
+            padding: 0.9rem 1.8rem;
+            border: 1px solid #eedccc;
+            display: inline-block;
+            font-size: 0.95rem;
+            color: #3c2b1f;
+            margin-top: 0.8rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .access-note a {
+            color: #784f32;
+            text-decoration: none;
+            font-weight: 510;
+            padding: 0.1rem 0.2rem;
+            border-radius: 20px;
+            transition: background 0.15s, color 0.1s;
+        }
+
+        .access-note a:hover {
+            background: #f1dbca;
+            color: #2f1b0e;
+        }
+
+        .footer-sub {
+            margin-top: 2.4rem;
+            font-size: 0.8rem;
+            color: #8f6f57;
+            text-align: right;
+            border-top: 1px solid #ead8c9;
+            padding-top: 1.2rem;
+            letter-spacing: 0.2px;
+        }
+
+        .dot-divider {
+            display: inline-block;
+            margin: 0 6px;
+            color: #c9ad95;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-card">
+        <h1>
+            leyu
+            <span class="hint-badge">简明指南</span>
+        </h1>
+        <div class="subhead">
+            一次浏览 · 从了解开始，不急不慢
+        </div>
+
+        <div class="summary">
+            <strong>leyu</strong> 是一个整合了资讯与工具入口的轻量站点，界面以清晰、直接为主。如果你正在寻找一个不那么拥挤、功能导向明确的访问起点，这里或许值得你花几分钟翻一翻。以下从几个侧面做了简单梳理。
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>◈ 信息结构</h3>
+                <p>页面分区明确，常用模块在首屏即可触达。层级不深，适合快速定位。</p>
+            </div>
+            <div class="feature-item">
+                <h3>◈ 内容节奏</h3>
+                <p>没有过度推送或信息轰炸，展示克制，留白友好，浏览压力较小。</p>
+            </div>
+            <div class="feature-item">
+                <h3>◈ 可用场景</h3>
+                <p>日常信息查阅、工具衔接、或作为某个流程的中间页都合适。</p>
+            </div>
+            <div class="feature-item">
+                <h3>◈ 访问印象</h3>
+                <p>加载速度正常，元素反馈干脆，没有复杂验证或多余跳转。</p>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <p><span class="label">使用建议 ·</span> 初次访问时可以先浏览顶部导航与主要分类，不需要一次读完所有内容。站点更新节奏适中，隔段时间回来可能看到新的条目。如果遇到页面显示异常，可以尝试刷新或清除缓存后重试。</p>
+        </div>
+
+        <div class="faq-mini">
+            <details>
+                <summary>leyu 更适合哪种访问习惯？</summary>
+                <p>适合不希望在首页被过多动态内容干扰的人。它的布局偏静态，但主要入口都在明处，点击两三下就能找到目标区域。</p>
+            </details>
+            <details>
+                <summary>内容更新频率如何？</summary>
+                <p>没有固定周期，但改动通常集中在几个子模块中。如果你关心特定板块，隔周回来看看即可。</p>
+            </details>
+            <details>
+                <summary>移动端体验怎么样？</summary>
+                <p>自适应做得比较干净，按钮和链接间距合理，横竖屏切换没有明显错位。部分表格类内容建议横屏阅读。</p>
+            </details>
+        </div>
+
+        <div class="access-note">
+            <span>直接前往 </span><a href="https://portal--leyu.com">leyu</a><span> · 页面由你掌控</span>
+        </div>
+
+        <div class="footer-sub">
+            <span>从一次浏览开始</span>
+            <span class="dot-divider">·</span>
+            <span>保持轻量 · 不设限</span>
+            <span class="dot-divider">·</span>
+            <span>只做引介</span>
+        </div>
+    </div>
+</body>
+</html>
